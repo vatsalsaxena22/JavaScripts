@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JavaScript</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+      }
+      header {
+        display: flex;
+        justify-content: start;
+        align-items: center;
+        gap: 20px;
+      }
+      .content{
+        max-height: 300px;
+        overflow-y: auto;
+        background-color: black;
+        color: yellow;
+      }
+      #console-output {
+        background-color: #e6e6e6;
+        border: 1px solid #ddd;
+        border-radius: 10px;
+        margin: 20px;
+        padding: 20px;
+        font-family: monospace;
+        white-space: pre-wrap;
+        overflow-y: auto;
+        max-height: 200px;
+      }
+    </style>
+
+    <link
+      rel="shortcut icon"
+      href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg"
+      type="image/x-icon"
+    />
+
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css"
+    />
+  </head>
+  <body>
+    <header>
+      <img
+        src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg"
+        width="100"
+      />
+
+      <div>
+        <h1>JavaScript</h1>
+        <p>
+          JavaScript (JS) is a high-performance, event-driven, and versatile
+          programming language that powers modern web applications, real-time
+          systems, and scalable backend architectures.
+        </p>
+      </div>
+    </header>
+
+    <div class="content">
+      <pre>
+        // JavaScript
+  
+        // Syntax
+  
+        console.log("Hello, World!");
+  
+        // Variables
+  
+        var x = 10;
+        let y = "Hello";
+        const z = 3.14;
+  
+        // Data Types
+  
+        // Primitive Data Types
+  
+        let a = null; // Null
+        let b; // Undefined
+        let c = true; // Boolean
+        let d = 10; // Number
+        let e = 9007199254740991n; // BigInt
+        let f = "Hello"; // String
+        let g = Symbol(); // Symbol
+  
+        // Non-Primitive Data Types
+  
+        let h = {name: "John", age: 20}; // Object
+        let i = [1, 2, 3]; // Array
+  
+        // Operators
+  
+        // Arithmetic Operators
+  
+        console.log(5 + 6); // Addition
+        console.log(5 - 6); // Subtraction
+        console.log(5 * 6); // Multiplication
+        console.log(5 / 6); // Division
+        console.log(5 % 6); // Modulus
+        console.log(5 ** 6); // Exponentiation
+        console.log(x++); // Increment
+        console.log(x--); // Decrement
+  
+        // Assignment Operators
+  
+        x = 10;
+        x += 5; // x = x + 5
+        x -= 5; // x = x - 5
+        x *= 5; // x = x * 5
+        x /= 5; // x = x / 5
+        x %= 5; // x = x % 5
+        x **= 5; // x = x ** 5
+  
+        // Comparison Operators
+  
+        console.log(5 == 6); // Equal to
+        console.log(5 === 6); // Strict equal to
+        console.log(5 != 6); // Not equal to
+        console.log(5 !== 6); // Strict not equal to
+        console.log(5 > 6); // Greater than
+        console.log(5 < 6); // Less than
+        console.log(5 >= 6); // Greater than or equal to
+        console.log(5 <= 6); // Less than or equal to
+  
+        // Logical Operators
+  
+        console.log(true && false); // Logical AND
+        console.log(true || false); // Logical OR
+        console.log(!true); // Logical NOT
+  
+        // Type Operators
+  
+        console.log(typeof("hello")); // Type of
+        console.log(5 instanceof Number); // Instance of
+  
+        // Bitwise Operators
+  
+        console.log(5 & 6); // Bitwise AND
+        console.log(5 | 6); // Bitwise OR
+        console.log(5 ^ 6); // Bitwise XOR
+        console.log(~5); // Bitwise NOT
+        console.log(5 << 6); // Bitwise Left Shift
+        console.log(5 >> 6); // Bitwise Right Shift
+        console.log(5 >>> 6); // Bitwise Unsigned Right Shift  
+      </pre>
+    </div>
+
+    <div id="console-output"></div>
+
+    <script>
+      // Get the console output div
+      const consoleOutput = document.getElementById("console-output");
+
+      // Overriding the console.log function
+      const originalConsoleLog = console.log;
+      console.log = function (...args) {
+        // Call the original console.log
+        originalConsoleLog.apply(console, args);
+
+        // Format and display log messages on the page
+        args.forEach((arg) => {
+          const message =
+            typeof arg === "object" ? JSON.stringify(arg, null, 2) : arg;
+          consoleOutput.textContent += message + "\n";
+        });
+      };
+      console.log("Console Output:\n");
+    </script>
+
+    <script src="./script.js"></script>
+  </body>
+</html>
