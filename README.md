@@ -1,6 +1,10 @@
+0. [Home](https://vatsalsaxena22.github.io/JavaScripts/) 1. [JavaScript](https://vatsalsaxena22.github.io/JavaScripts/JavaScript/) 2. [TypeScript](https://vatsalsaxena22.github.io/JavaScripts/TypeScript/) 3. [Node](https://vatsalsaxena22.github.io/JavaScripts/Node/) 4. [Deno](https://vatsalsaxena22.github.io/JavaScripts/Deno/)
+
+---
+
 <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg" width="50"/>
 
-# [JavaScript](https://vatsalsaxena22.github.io/JavaScripts/JavaScript/index.html) :
+# [JavaScript](https://vatsalsaxena22.github.io/JavaScripts/JavaScript/) :
 
 JavaScript (JS) is a high-level, interpreted programming language primarily used to create interactive and dynamic web pages. It is a core web technology alongside HTML and CSS.
 
