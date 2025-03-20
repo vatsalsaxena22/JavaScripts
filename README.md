@@ -1,4 +1,4 @@
-0. [Home](https://vatsalsaxena22.github.io/JavaScripts/) 1. [JavaScript](https://vatsalsaxena22.github.io/JavaScripts/JavaScript/) 2. [TypeScript](https://vatsalsaxena22.github.io/JavaScripts/TypeScript/) 3. [Node](https://vatsalsaxena22.github.io/JavaScripts/Node/) 4. [Deno](https://vatsalsaxena22.github.io/JavaScripts/Deno/)
+[Home](https://vatsalsaxena22.github.io/JavaScripts/) | [JavaScript](https://vatsalsaxena22.github.io/JavaScripts/JavaScript/) | [TypeScript](https://vatsalsaxena22.github.io/JavaScripts/TypeScript/) | [Node](https://vatsalsaxena22.github.io/JavaScripts/Node/) | [Deno](https://vatsalsaxena22.github.io/JavaScripts/Deno/)
 
 ---
 
