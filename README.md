@@ -26,4 +26,4 @@ A runtime environment that allows you to execute JavaScript server-side. Perfect
 
 A modern runtime for JavaScript and TypeScript created by the original developer of Node.js.. It’s secure by default, ships with TypeScript support out of the box, and has no package manager—it uses URLs to import modules instead. A refreshing take on server-side JavaScript.
 
-[About](about.md)
+[About](/JavaScript/README.md)
