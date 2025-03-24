@@ -1,4 +1,4 @@
-[Home](https://vatsalsaxena22.github.io/JavaScripts/) | [JavaScript](https://vatsalsaxena22.github.io/JavaScripts/JavaScript/) | [TypeScript](https://vatsalsaxena22.github.io/JavaScripts/TypeScript/) | [Node](https://vatsalsaxena22.github.io/JavaScripts/Node/) | [Deno](https://vatsalsaxena22.github.io/JavaScripts/Deno/)
+[Home](README.md) | [JavaScript](JavaScript.md) | [TypeScript](TypeScript.md) | [Node](Node.md) | [Deno](Deno.md)
 
 ---
 
@@ -25,5 +25,3 @@ A runtime environment that allows you to execute JavaScript server-side. Perfect
 # Deno :
 
 A modern runtime for JavaScript and TypeScript created by the original developer of Node.js.. It’s secure by default, ships with TypeScript support out of the box, and has no package manager—it uses URLs to import modules instead. A refreshing take on server-side JavaScript.
-
-[About](/JavaScript/README.md)
