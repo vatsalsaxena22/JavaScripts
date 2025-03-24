@@ -14,11 +14,23 @@
         align-items: center;
         gap: 20px;
       }
-      .content{
+ 
+      .content {
         max-height: 300px;
         overflow-y: auto;
         background-color: black;
         color: yellow;
+      }
+      .content::-webkit-scrollbar {
+        width: 20px;
+      }
+
+      .content::-webkit-scrollbar-thumb {
+        background: yellow;
+      }
+
+      .content::-webkit-scrollbar-track {
+        background: black;
       }
       #console-output {
         background-color: #e6e6e6;
@@ -30,6 +42,18 @@
         white-space: pre-wrap;
         overflow-y: auto;
         max-height: 200px;
+      }
+      #console-output::-webkit-scrollbar{
+        width: 0;
+      }
+      pre {
+        padding-left: 50px;
+      }
+
+      @media(max-width: 600px){
+        header p{
+        font-size: 10px;
+      }
       }
     </style>
 
@@ -63,96 +87,20 @@
     </header>
 
     <div class="content">
-      <pre>
-        // JavaScript
-  
-        // Syntax
-  
-        console.log("Hello, World!");
-  
-        // Variables
-  
-        var x = 10;
-        let y = "Hello";
-        const z = 3.14;
-  
-        // Data Types
-  
-        // Primitive Data Types
-  
-        let a = null; // Null
-        let b; // Undefined
-        let c = true; // Boolean
-        let d = 10; // Number
-        let e = 9007199254740991n; // BigInt
-        let f = "Hello"; // String
-        let g = Symbol(); // Symbol
-  
-        // Non-Primitive Data Types
-  
-        let h = {name: "John", age: 20}; // Object
-        let i = [1, 2, 3]; // Array
-  
-        // Operators
-  
-        // Arithmetic Operators
-  
-        console.log(5 + 6); // Addition
-        console.log(5 - 6); // Subtraction
-        console.log(5 * 6); // Multiplication
-        console.log(5 / 6); // Division
-        console.log(5 % 6); // Modulus
-        console.log(5 ** 6); // Exponentiation
-        console.log(x++); // Increment
-        console.log(x--); // Decrement
-  
-        // Assignment Operators
-  
-        x = 10;
-        x += 5; // x = x + 5
-        x -= 5; // x = x - 5
-        x *= 5; // x = x * 5
-        x /= 5; // x = x / 5
-        x %= 5; // x = x % 5
-        x **= 5; // x = x ** 5
-  
-        // Comparison Operators
-  
-        console.log(5 == 6); // Equal to
-        console.log(5 === 6); // Strict equal to
-        console.log(5 != 6); // Not equal to
-        console.log(5 !== 6); // Strict not equal to
-        console.log(5 > 6); // Greater than
-        console.log(5 < 6); // Less than
-        console.log(5 >= 6); // Greater than or equal to
-        console.log(5 <= 6); // Less than or equal to
-  
-        // Logical Operators
-  
-        console.log(true && false); // Logical AND
-        console.log(true || false); // Logical OR
-        console.log(!true); // Logical NOT
-  
-        // Type Operators
-  
-        console.log(typeof("hello")); // Type of
-        console.log(5 instanceof Number); // Instance of
-  
-        // Bitwise Operators
-  
-        console.log(5 & 6); // Bitwise AND
-        console.log(5 | 6); // Bitwise OR
-        console.log(5 ^ 6); // Bitwise XOR
-        console.log(~5); // Bitwise NOT
-        console.log(5 << 6); // Bitwise Left Shift
-        console.log(5 >> 6); // Bitwise Right Shift
-        console.log(5 >>> 6); // Bitwise Unsigned Right Shift  
-      </pre>
+      <pre id="js-content"></pre>
     </div>
 
     <div id="console-output"></div>
 
     <script>
+      // Fetch and display the JS file content
+      fetch("script.js")
+        .then((response) => response.text())
+        .then((data) => {
+          document.getElementById("js-content").textContent = data;
+        })
+        .catch((error) => console.error("Error loading JS file:", error));
+
       // Get the console output div
       const consoleOutput = document.getElementById("console-output");
 

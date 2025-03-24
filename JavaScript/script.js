@@ -30,7 +30,9 @@ const obj = { key: "value" }; // Object
 
 const arr = [1, 2, 3]; // Array
 
-function greet() { return "Hello"; } // Function
+function greet() {
+  return "Hello";
+} // Function
 
 // Operators
 
@@ -77,7 +79,70 @@ console.log(!true); // Logical NOT
 console.log(typeof "hello"); // Type of
 console.log(5 instanceof Number); // Instance of
 
-// Ternaary Operator
+// Ternary Operator
 
-let terOpr = (x > 10) ? "Greater" : "Smaller";
+let terOpr = x > 10 ? "Greater" : "Smaller";
 console.log(terOpr);
+
+// If Else Statements
+
+// If
+
+if (100 > 10) {
+  console.log("Greater");
+}
+
+// If Else
+
+if (1 > 10) {
+  console.log("Greater");
+} else {
+  console.log("Smaller");
+}
+
+// Else If
+
+if (10 > 10) {
+  console.log("Greater");
+} else if (10 < 10) {
+  console.log("Smaller");
+} else {
+  console.log("Equal");
+}
+
+// Switch Case Statements
+
+let swi = 10;
+switch (swi) {
+  case 0:
+    console.log("Zero");
+    break;
+  case 5:
+    console.log("Five");
+    break;
+  case 10:
+    console.log("Ten");
+    break;
+  default:
+    console.log("Other");
+}
+
+// Loops
+
+// While Loop
+
+let whi = 0;
+while (whi < 5) {
+  console.log(whi);
+  whi++;
+}
+
+// Do While Loop
+
+let dow = 0;
+do {
+  console.log(dow);
+  dow++;
+} while (dow < 5);
+
+// For Loop
