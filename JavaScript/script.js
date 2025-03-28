@@ -146,3 +146,47 @@ do {
 } while (dow < 5);
 
 // For Loop
+
+let loopArray = ["apple", "banana", "cherry", "grapes", "mango"];
+for (let index = 0; index < loopArray.length; index++) {
+  const element = loopArray[index];
+  console.log(element);
+}
+
+// For In
+
+{
+  const person = {
+    fullName: "John",
+    lastName: "Doe",
+    age: 25,
+  };
+
+  let text = "";
+
+  for (let x in person) {
+    text += person[x] + " ";
+    console.log(text);
+  }
+}
+
+// For In - Array
+
+{
+  let arr = [1, 2, 3, 4, 5];
+
+  for (let x in arr) {
+    console.log(arr[x]);
+  }
+}
+
+// For Of
+
+{
+  let x = "JavaScript";
+
+  for (const i of x) {
+    console.log(i);
+  }
+}
+

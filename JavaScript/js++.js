@@ -41,3 +41,5 @@ console.log(result2); // "Default Value"
 let user = { profile: { name: "Vatsal" } };
 console.log(user.profile?.name);  // "Vatsal"
 console.log(user.address?.city);  // undefined (No error)
+
+// JavaScript Iterables
