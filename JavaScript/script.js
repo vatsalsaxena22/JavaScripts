@@ -190,3 +190,86 @@ for (let index = 0; index < loopArray.length; index++) {
   }
 }
 
+// Functions
+
+// Syntax
+{
+  function myFunction(p1, p2){
+    return p1 * p2;
+  }
+}
+
+// Example - Add of two numbers
+
+{
+  function addFun(no1, no2){
+    return no1 + no2;
+  }
+
+  console.log(addFun(12, 13));
+}
+
+// Arrow Function
+
+{
+  let myFunction = ()=>{
+    console.log("Arrow");
+  }
+
+  myFunction()
+
+  // Arrow Function with parameters
+
+  let addFun = (a, b)=>{
+    console.log(a + b);
+  }
+
+  addFun(12, 13);
+}
+
+// Function Parameters & Default Parameters
+
+{
+  // Function Parameters
+  function greet1(name){
+    console.log("Hello " + name)
+  }
+
+  greet1("Vatsal")
+  greet1()
+
+  // Default Parameters
+  function greet2(name = "Guest"){
+    console.log("Hello " + name)
+  }
+
+  greet2("Vatsal")
+  greet2()
+}
+
+// Higher-Order Function
+
+{
+  // Function as an Argument
+  function greet(name, callbackFun){
+    console.log("hello " + name);
+    callbackFun();
+  }
+
+  function saybye(){
+    console.log("bye bye")
+  }
+
+  greet("vatsal", saybye)
+
+  // Function returning Another Function
+  function multiplier(factor){
+    return function(number){
+      return number * factor;
+    }
+  }
+
+  let multiple = multiplier(12)
+
+  console.log(multiple(12))
+}

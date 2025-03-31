@@ -2,7 +2,7 @@
 
 ---
 
-<img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/denojs/denojs-original.svg" width="50"/>
+<img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/denojs/denojs-original.svg" width="100"/>
 
 # Deno :
 
