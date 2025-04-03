@@ -6,29 +6,35 @@ console.log("Hello, World!");
 
 // Variables
 
-var x = 10;
-let y = "Hello";
-const z = true;
+{
+  var x = 10;
+  let y = "Hello";
+  const z = true;
+}
 
 // Data Types
 
 // Primitive Data Types
 
-let num = 10; // Number
-let str = "Hello"; // String
-let bool = true; // Boolean
+{
+  let num = 10; // Number
+  let str = "Hello"; // String
+  let bool = true; // Boolean
 
-let undef; // Undefined
-let nul = null; // Null
+  let undef; // Undefined
+  let nul = null; // Null
 
-let sym = Symbol(); // Symbol - ES6
-let bigint = 10n; // BigInt - ES11
+  let sym = Symbol(); // Symbol - ES6
+  let bigint = 10n; // BigInt - ES11
+}
 
 // Non-Primitive Data Types
 
-const obj = { key: "value" }; // Object
+{
+  const obj = { key: "value" }; // Object
 
-const arr = [1, 2, 3]; // Array
+  const arr = [1, 2, 3]; // Array
+}
 
 function greet() {
   return "Hello";
@@ -38,24 +44,28 @@ function greet() {
 
 // Arithmetic Operators
 
-console.log(5 + 6); // Addition
-console.log(5 - 6); // Subtraction
-console.log(5 * 6); // Multiplication
-console.log(5 / 6); // Division
-console.log(5 % 6); // Modulus
-console.log(5 ** 6); // Exponentiation
-console.log(x++); // Increment
-console.log(x--); // Decrement
+{
+  console.log(5 + 6); // Addition
+  console.log(5 - 6); // Subtraction
+  console.log(5 * 6); // Multiplication
+  console.log(5 / 6); // Division
+  console.log(5 % 6); // Modulus
+  console.log(5 ** 6); // Exponentiation
+  console.log(x++); // Increment
+  console.log(x--); // Decrement
+}
 
 // Assignment Operators
 
-x = 10; // assign operator
-x += 5; // x = x + 5
-x -= 5; // x = x - 5
-x *= 5; // x = x * 5
-x /= 5; // x = x / 5
-x %= 5; // x = x % 5
-x **= 5; // x = x ** 5
+{
+  x = 10; // assign operator
+  x += 5; // x = x + 5
+  x -= 5; // x = x - 5
+  x *= 5; // x = x * 5
+  x /= 5; // x = x / 5
+  x %= 5; // x = x % 5
+  x **= 5; // x = x ** 5
+}
 
 // Comparison Operators
 
@@ -81,8 +91,10 @@ console.log(5 instanceof Number); // Instance of
 
 // Ternary Operator
 
-let terOpr = x > 10 ? "Greater" : "Smaller";
-console.log(terOpr);
+{
+  let terOpr = x > 10 ? "Greater" : "Smaller";
+  console.log(terOpr);
+}
 
 // If Else Statements
 
@@ -194,7 +206,7 @@ for (let index = 0; index < loopArray.length; index++) {
 
 // Syntax
 {
-  function myFunction(p1, p2){
+  function myFunction(p1, p2) {
     return p1 * p2;
   }
 }
@@ -202,7 +214,7 @@ for (let index = 0; index < loopArray.length; index++) {
 // Example - Add of two numbers
 
 {
-  function addFun(no1, no2){
+  function addFun(no1, no2) {
     return no1 + no2;
   }
 
@@ -212,17 +224,17 @@ for (let index = 0; index < loopArray.length; index++) {
 // Arrow Function
 
 {
-  let myFunction = ()=>{
+  let myFunction = () => {
     console.log("Arrow");
-  }
+  };
 
-  myFunction()
+  myFunction();
 
   // Arrow Function with parameters
 
-  let addFun = (a, b)=>{
+  let addFun = (a, b) => {
     console.log(a + b);
-  }
+  };
 
   addFun(12, 13);
 }
@@ -231,45 +243,98 @@ for (let index = 0; index < loopArray.length; index++) {
 
 {
   // Function Parameters
-  function greet1(name){
-    console.log("Hello " + name)
+  function greet1(name) {
+    console.log("Hello " + name);
   }
 
-  greet1("Vatsal")
-  greet1()
+  greet1("Vatsal");
+  greet1();
 
   // Default Parameters
-  function greet2(name = "Guest"){
-    console.log("Hello " + name)
+  function greet2(name = "Guest") {
+    console.log("Hello " + name);
   }
 
-  greet2("Vatsal")
-  greet2()
+  greet2("Vatsal");
+  greet2();
 }
 
 // Higher-Order Function
 
 {
   // Function as an Argument
-  function greet(name, callbackFun){
+  function greet(name, callbackFun) {
     console.log("hello " + name);
     callbackFun();
   }
 
-  function saybye(){
-    console.log("bye bye")
+  function saybye() {
+    console.log("bye bye");
   }
 
-  greet("vatsal", saybye)
+  greet("vatsal", saybye);
 
   // Function returning Another Function
-  function multiplier(factor){
-    return function(number){
+  function multiplier(factor) {
+    return function (number) {
       return number * factor;
-    }
+    };
   }
 
-  let multiple = multiplier(12)
+  let multiple = multiplier(12);
 
-  console.log(multiple(12))
+  console.log(multiple(12));
+}
+
+// Scope
+
+// Block Scope
+
+{
+  let blockScope = "hello";
+
+  console.log(blockScope);
+}
+// console.log(blockScope) // give error
+
+// Local or Function Scope
+
+let funcScope = () => {
+  let thisScope = 12;
+
+  console.log(thisScope);
+};
+funcScope();
+// console.log(thisScope); // give error
+
+// Global Scope
+let globalScope = true;
+
+console.log(globalScope);
+
+// Hoisting
+
+// function
+{
+  sayHello(); // work fine
+
+  function sayHello() {
+    console.log("hello");
+  }
+}
+// Variable
+{
+  // var
+  console.log(hx);
+  var hx = 10;
+  console.log(hx);
+
+  // let & const
+
+  // console.log(hy1); // give error
+  // console.log(hy2); // give error
+  let hy1 = 1;
+  const hy2 = 1;
+  console.log(hy1);
+  console.log(hy2);
 }

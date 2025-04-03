@@ -1,0 +1,147 @@
+/* Base styles and reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  background-color: #f7df1e14;
+  color: #333;
+  line-height: 1.6;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* Header styling */
+header {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  margin-bottom: 30px;
+  padding: 20px;
+  background-color: #f7df1e;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+header img {
+  width: 100px;
+  border: 2px solid black;
+}
+
+header h1 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+  color: #323330;
+}
+
+header p {
+  font-size: 1.1rem;
+  color: #323330;
+  max-width: 800px;
+}
+
+/* Button styling */
+.btn-div {
+  margin: 20px 0;
+  text-align: left;
+}
+
+.btn {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #323330;
+  color: #f7df1e;
+  text-decoration: none;
+  border-radius: 4px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.btn:hover {
+  background-color: #f7df1e;
+  color: #323330;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Content area */
+.content {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+  overflow: auto;
+}
+
+#js-content {
+  background-color: #282c34;
+  color: #abb2bf;
+  padding: 20px;
+  border-radius: 6px;
+  font-family: 'Consolas', 'Monaco', monospace;
+  line-height: 1.5;
+  white-space: pre-wrap;
+  overflow-x: auto;
+  max-height: 300px;
+}
+
+/* Console output styling */
+#console-output {
+  background-color: #282c34;
+  color: #98c379;
+  padding: 20px;
+  border-radius: 6px;
+  font-family: 'Consolas', 'Monaco', monospace;
+  white-space: pre-wrap;
+  max-height: 300px;
+  overflow-y: auto;
+  margin-bottom: 30px;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    text-align: center;
+    gap: 15px;
+  }
+  
+  header img {
+    width: 80px;
+  }
+  
+  header h1 {
+    font-size: 2rem;
+  }
+  
+  .content, #console-output {
+    padding: 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  body {
+    padding: 10px;
+  }
+  
+  header img{
+    width: 50px;
+  }
+
+  header h1 {
+    font-size: 20px;
+  }
+  
+  header p {
+    font-size: 10px;
+  }
+
+  .btn-div{
+    text-align: center;
+  }
+}
