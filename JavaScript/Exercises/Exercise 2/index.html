@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <label for="num1">Enter Number 1 : </label>
+    <input type="number" name="num1" id="num1" />
+    <br />
+    <label for="num2">Enter Number 2 :</label>
+    <input type="number" name="num2" id="num2" />
+    <br />
+    <label for="opr">Choose Operator : </label>
+    <select name="opr" id="opr">
+      <option value="+">Add (+)</option>
+      <option value="-">Subtract (-)</option>
+      <option value="*">Multiply (*)</option>
+      <option value="/">Divide (/)</option>
+    </select>
+    <br />
+    <button onclick="calculate()">Submit</button>
+    <h1 id="result"></h1>
+
+    <script src="script.js"></script>
+  </body>
+</html>

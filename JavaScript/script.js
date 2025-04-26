@@ -325,7 +325,7 @@ console.log(globalScope);
 // Variable
 {
   // var
-  console.log(hx);
+  console.log(hx); // undefined
   var hx = 10;
   console.log(hx);
 
