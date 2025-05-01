@@ -8,13 +8,6 @@ console.log(5 << 6); // Bitwise Left Shift
 console.log(5 >> 6); // Bitwise Right Shift
 console.log(5 >>> 6); // Bitwise Unsigned Right Shift
 
-// Ternary Operator (?:)
-// Shorter way to write an if-else condition.
-
-let age = 18;
-let result1 = (age >= 18) ? "Adult" : "Minor";
-console.log(result1); // "Adult"
-
 // Spread & Rest Operators (...)
 
 // Spread (...) - Expands an array or object.
@@ -37,9 +30,6 @@ console.log(result2); // "Default Value"
 // Optional Chaining (?.)
 // Prevents errors when accessing properties that might be null or undefined.
 
-
 let user = { profile: { name: "Vatsal" } };
 console.log(user.profile?.name);  // "Vatsal"
 console.log(user.address?.city);  // undefined (No error)
-
-// JavaScript Iterables

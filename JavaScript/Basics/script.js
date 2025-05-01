@@ -4,6 +4,14 @@
 
 console.log("Hello, World!");
 
+// This is a comment
+
+/*
+this is
+a multi-line 
+comment
+*/
+
 // Variables
 
 {
@@ -34,11 +42,11 @@ console.log("Hello, World!");
   const obj = { key: "value" }; // Object
 
   const arr = [1, 2, 3]; // Array
+  
+  function greet() {
+    return "Hello";
+  } // Function
 }
-
-function greet() {
-  return "Hello";
-} // Function
 
 // Operators
 

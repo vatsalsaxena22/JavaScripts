@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>JavaScript</title>
 
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css" />
 
     <link
       rel="shortcut icon"
@@ -37,47 +37,66 @@
     </header>
 
     <div class="btn-div">
-      <a href="https://vatsalsaxena22.github.io/JavaScripts/" class="btn">Back to Home</a>
+      <a href="https://vatsalsaxena22.github.io/JavaScripts/" class="btn"
+        >Back to Home</a
+      >
       <a href="./Exercises/Exercise 1/index.html" class="btn">console.log()</a>
-      <a href="./Exercises/Exercise 2/index.html" class="btn">Simple Calculator</a>
+      <a href="./Exercises/Exercise 2/index.html" class="btn"
+        >Simple Calculator</a
+      >
       <a href="./Exercises/Exercise 3/index.html" class="btn">Even Odd</a>
       <a href="./Exercises/Exercise 4/index.html" class="btn">Factorial</a>
     </div>
-    
+
     <div class="content">
+      <button class="content-btn" id="btn-basics">Basics</button>
+      <button class="content-btn" id="btn-intermediate">Intermediate</button>
       <pre id="js-content"></pre>
     </div>
 
-    <div id="console-output"></div>
-
     <script>
+      let btnBasics = document.getElementById("btn-basics");
+      let btnIntermediate = document.getElementById("btn-intermediate");
+
+      btnBasics.addEventListener("click", function () {
+        window.location.href = window.location.pathname + "?section=basics";
+      });
+
+      btnIntermediate.addEventListener("click", function () {
+        window.location.href =
+          window.location.pathname + "?section=intermediate";
+      });
+
+      // Check URL parameters to decide which script to load
+      const urlParams = new URLSearchParams(window.location.search);
+      const section = urlParams.get("section") || "basics";
+
+      let scriptPath;
+      
+      if(section === "intermediate"){
+        scriptPath = "./Intermediate/script.js"
+        btnIntermediate.classList.add("content-btn-active");
+      } else if(section === "basics"){
+        scriptPath = "./Basics/script.js"
+        btnBasics.classList.add("content-btn-active");
+      } else {
+        scriptPath = "./Basics/script.js"
+        btnBasics.classList.add("content-btn-active");
+      }
+
       // Fetch and display the JS file content
-      fetch("script.js")
+      fetch(scriptPath)
         .then((response) => response.text())
         .then((data) => {
           document.getElementById("js-content").textContent = data;
         })
         .catch((error) => console.error("Error loading JS file:", error));
 
-      // Get the console output div
-      const consoleOutput = document.getElementById("console-output");
 
-      // Overriding the console.log function
-      const originalConsoleLog = console.log;
-      console.log = function (...args) {
-        // Call the original console.log
-        originalConsoleLog.apply(console, args);
-
-        // Format and display log messages on the page
-        args.forEach((arg) => {
-          const message =
-            typeof arg === "object" ? JSON.stringify(arg, null, 2) : arg;
-          consoleOutput.textContent += message + "\n";
-        });
-      };
-      console.log("Console Output:\n");
+      // Dynamically create and add the script tag based on the URL parameter
+      const scriptElement = document.createElement("script");
+      scriptElement.src = scriptPath;
+      document.body.appendChild(scriptElement);
     </script>
-
-    <script src="./script.js"></script>
   </body>
 </html>
