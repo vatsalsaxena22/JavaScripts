@@ -36,67 +36,49 @@
       </div>
     </header>
 
-    <div class="btn-div">
-      <a href="https://vatsalsaxena22.github.io/JavaScripts/" class="btn"
+    <div class="btn-div space-between">
+      <a href="https://vatsalsaxena22.github.io/JavaScripts/" class="btn btn-2"
         >Back to Home</a
       >
-      <a href="./Exercises/Exercise 1/index.html" class="btn">console.log()</a>
-      <a href="./Exercises/Exercise 2/index.html" class="btn"
-        >Simple Calculator</a
+      <button
+        class="navbar-toggler btn btn-2"
+        type="button"
+        id="offcanvasToggler"
       >
-      <a href="./Exercises/Exercise 3/index.html" class="btn">Even Odd</a>
-      <a href="./Exercises/Exercise 4/index.html" class="btn">Factorial</a>
+        ☰
+      </button>
+    </div>
+    <div class="backdrop" id="backdrop"></div>
+
+    <div class="offcanvas offcanvas-end" id="offcanvasRight" tabindex="-1">
+      <div class="offcanvas-header">
+        <h4 class="offcanvas-title">Navigation Menu</h4>
+        <button type="button" class="btn-close" id="offcanvasClose"></button>
+      </div>
+      <div class="offcanvas-body">
+        <div class="off-canvas-nav">
+          <button id="btn-basics" class="btn">Basics</button>
+          <button id="btn-intermediate" class="btn">Intermediate</button>
+        </div>
+      </div>
     </div>
 
-    <div class="content">
-      <button class="content-btn" id="btn-basics">Basics</button>
-      <button class="content-btn" id="btn-intermediate">Intermediate</button>
+    <h2 id="main-title">Basics</h2>
+
+    <h3>Topics</h3>
+    <div id="topics"></div>
+    <h3>Exercises</h3>
+    <div class="btn-div" id="exercise"></div>
+    <h3>Project</h3>
+    <div class="btn-div" id="project"></div>
+
+    <h3>Tutorial Code</h3>
+    <div class="code-container">
       <pre id="js-content"></pre>
+      <button class="copy-btn">Copy</button>
     </div>
 
-    <script>
-      let btnBasics = document.getElementById("btn-basics");
-      let btnIntermediate = document.getElementById("btn-intermediate");
-
-      btnBasics.addEventListener("click", function () {
-        window.location.href = window.location.pathname + "?section=basics";
-      });
-
-      btnIntermediate.addEventListener("click", function () {
-        window.location.href =
-          window.location.pathname + "?section=intermediate";
-      });
-
-      // Check URL parameters to decide which script to load
-      const urlParams = new URLSearchParams(window.location.search);
-      const section = urlParams.get("section") || "basics";
-
-      let scriptPath;
-      
-      if(section === "intermediate"){
-        scriptPath = "./Intermediate/script.js"
-        btnIntermediate.classList.add("content-btn-active");
-      } else if(section === "basics"){
-        scriptPath = "./Basics/script.js"
-        btnBasics.classList.add("content-btn-active");
-      } else {
-        scriptPath = "./Basics/script.js"
-        btnBasics.classList.add("content-btn-active");
-      }
-
-      // Fetch and display the JS file content
-      fetch(scriptPath)
-        .then((response) => response.text())
-        .then((data) => {
-          document.getElementById("js-content").textContent = data;
-        })
-        .catch((error) => console.error("Error loading JS file:", error));
-
-
-      // Dynamically create and add the script tag based on the URL parameter
-      const scriptElement = document.createElement("script");
-      scriptElement.src = scriptPath;
-      document.body.appendChild(scriptElement);
-    </script>
+    <script src="./data.js"></script>
+    <script src="./script.js"></script>
   </body>
 </html>
