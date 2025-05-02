@@ -20,11 +20,7 @@ const userInput = () => {
   }
   alert(`The number is ${num % 2 === 0 ? "Even" : "Odd"}!`);
 
-  if (confirm("Do you want to check another number?")) {
-    userInput();
-  } else {
-    alert("Thanks for using the Odd or Even Number Checker!");
-  }
+  alert("Thanks for using the Odd or Even Number Checker!");
 };
 
 userInput();
