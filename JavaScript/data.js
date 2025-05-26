@@ -38,7 +38,7 @@ const jsData = [
       },
     ],
     project: {
-      title: "Mini Quiz App",
+      title: "Quiz App",
       url: "./Basics/Project/index.html",
     },
   },

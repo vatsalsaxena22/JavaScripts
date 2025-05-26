@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="theme-color" content="#f7df1e">
+    <meta name="theme-color" content="#f7df1e" />
     <title>JavaScript</title>
 
     <link rel="stylesheet" href="style.css" />
@@ -13,7 +13,13 @@
       href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg"
       type="image/x-icon"
     />
-
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
     <link
       rel="stylesheet"
       type="text/css"
@@ -24,31 +30,29 @@
     <header>
       <img
         src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg"
-        width="100"
       />
 
       <div>
         <h1>JavaScript</h1>
-        <p>
-          JavaScript (JS) is a high-performance, event-driven, and versatile
-          programming language that powers modern web applications, real-time
-          systems, and scalable backend architectures.
-        </p>
+        <p>Dynamic, interactive, web scripting language.</p>
       </div>
     </header>
 
+    <!-- Navbar -->
     <div class="btn-div space-between">
       <a href="https://vatsalsaxena22.github.io/JavaScripts/" class="btn btn-2"
-        >Back to Home</a
-      >
+        ><i class="fa-solid fa-house"></i
+      ></a>
       <button
         class="navbar-toggler btn btn-2"
         type="button"
         id="offcanvasToggler"
       >
-        ☰
+        <i class="fa-solid fa-bars"></i>
       </button>
     </div>
+
+    <!-- Off Canvas -->
     <div class="backdrop" id="backdrop"></div>
 
     <div class="offcanvas offcanvas-end" id="offcanvasRight" tabindex="-1">
@@ -64,6 +68,7 @@
       </div>
     </div>
 
+    <!-- Main Content -->
     <h2 id="main-title">Basics</h2>
 
     <h3>Topics</h3>
@@ -80,7 +85,11 @@
     </div>
 
     <footer>
-      Developed & Designed by <a href="https://vatsalsaxena22.github.io/" target="_blank">Vatsal Saxena</a> &copy; 2025 JavaScript. All right reserved.
+      Developed & Designed by
+      <a href="https://vatsalsaxena22.github.io/" target="_blank"
+        >Vatsal Saxena</a
+      >
+      &copy; 2025 JavaScript. All right reserved.
     </footer>
 
     <script src="./data.js"></script>
